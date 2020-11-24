@@ -1,0 +1,17 @@
+.Row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ArrowIconLeft {
+    margin-left: 20px;
+    margin-top: 20px;
+    color:white;
+}
+
+.ArrowIconRight {
+    margin-right: 20px;
+    margin-top: 20px;
+    color:white;
+}

@@ -1,0 +1,67 @@
+
+.CatEditContainer {
+    width: 900px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 0px;
+    margin-top: 20px;
+    background-color: #355C7D;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.CatEditLocationRow {
+    margin-bottom: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.CatEditLocationHeader {
+    color: #F67280;
+    font-size: 25px;
+    font-weight: bold;
+    width: 25%;
+    text-align: center;
+}
+
+.CatEditLocationCell {
+    color: #F8B195;
+    font-size: 20px;
+    width: 25%;
+    text-align: center;
+}
+
+.CatEditDeleteCell {
+    color: #F8B195;
+    width: 10%;
+    text-align: center;
+}
+
+.LocAddInput {
+    width: 10%;
+    display: inline-flex;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    background-color: #F8B195;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.LocAddContainer {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+}
+
+.LocAddButton {
+    margin-left: 30px;
+}

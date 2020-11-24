@@ -1,0 +1,67 @@
+
+.ToolbarContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.BackButton {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-left: 30px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    background-color: #355C7D;
+    border-radius: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.BackButton:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.Toolbar {
+    width: 400px;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    padding-left: 20px;
+    margin-top: 20px;
+    background-color: #355C7D;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.Title {
+    font-weight: bold;
+    color:  #F8B195;
+    margin-right: 50px;
+}
+
+.IconsContainer {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.Icon {
+    margin-right: 20px;
+    color: #F8B195;
+}
+
+.BackIcon {
+    color: #F8B195;
+}
+
+.Icon:hover {
+    position: relative;
+    bottom: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,93 @@
+.CatAddContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.CatAddInputDiv {
+    width: 300px;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    background-color: #F8B195;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+
+button {
+    align-self: center;
+    justify-self: center;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    resize: none;
+    text-align: center;
+    color: #355C7D;
+    background-color: #F8B195;
+    width: fit-content;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+button:hover {
+    color: #F8B195;
+    background-color: #355C7D;
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #6C5B7B;
+    opacity: 0.4;
+}
+
+input {
+    align-self: center;
+    justify-self: center;
+    border: none;
+    overflow: auto;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    resize: none;
+    text-align: center;
+    color: #C06C84;
+    background-color: #F8B195;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.CatAddSquare {
+    width: fit-content;
+    margin-right: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    background-color: #F8B195;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.CatAddText {
+    font-weight: bold;
+}
+
+.CatAddHeader {
+    font-weight: bold;
+    text-align: center;
+    color: #355C7D;
+}

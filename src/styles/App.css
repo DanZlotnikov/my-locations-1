@@ -1,0 +1,16 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgb(248, 177, 149) 0%, rgb(246, 114, 128) 25%, rgb(192, 108, 132) 50%, rgb(108, 91, 123) 75%, rgb(53, 92, 125) 100%);
+  height: fit-content;
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 20px;
+  align-items: center;
+}

@@ -1,0 +1,24 @@
+.CategoryBox {
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 20px;
+    background-color: #F8B195;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px -5px #000000;
+}
+
+.CategoryBox:hover {
+    background-color: #355C7D;
+    cursor: pointer;
+}
+
+.CategoryText {
+    font-weight: bold;
+    text-align: center;
+    color: #C06C84
+}
