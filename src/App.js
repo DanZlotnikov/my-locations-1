@@ -1,9 +1,11 @@
 import React from 'react'
 import Toolbar from './components/Toolbar'
+import BottomBar from './components/BottomBar'
 import Categories from './components/Categories'
 import CatView from './components/CRUD/CatView'
 import CatAdd from './components/CRUD/CatAdd'
 import CatEdit from './components/CRUD/CatEdit'
+import Locations from './components/CRUD/Locations'
 import './styles/App.css'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
@@ -19,6 +21,7 @@ class App extends React.Component {
       catEditing: null,
       catViewing: null,
       catAdding: null,
+      showLocations: false,
       showCats: true
     }
   }
@@ -37,6 +40,7 @@ class App extends React.Component {
       catEditing: null,
       catViewing: null,
       catAdding: null,
+      showLocations: false,
       showCats: true
     })
   } 
@@ -66,58 +70,74 @@ class App extends React.Component {
     this.setState({showCats: false})
   } 
 
+  openLocations = () => {
+    console.log('show locations')
+    this.setState({showLocations: true})
+    this.setState({showCats: false})
+  }
+
   removeLocation = (cat, location) => {
     this.props.removeLocation(cat, location)
     this.setState({})
   }
 
   addLocation = (cat, location) => {
-    console.log('app addloc')
+    console.log('app.js - add location')
     this.props.addLocation(cat, location)
     this.setState({})
   }
-
+  
   render() {
-    console.log(this.state.categories)
     return (
-        <div className="App">
-          <Toolbar 
-            cat={this.state.chosenCat} 
-            catEdit={this.catEdit} 
-            catRemove={this.catRemove}
-            catView={this.catView}
-            catAdd={this.catAdd} 
-            goBack={this.goBack}
-            showBackButton={this.state.catEditing || this.state.catViewing || this.state.catAdding}
-          />
-          {this.state.showCats ? 
-            <Categories 
-              cats={this.state.categories} 
-              catUnpressed={this.catUnpressed} 
-              catPressed={this.catPressed}
-            /> 
-          : null}
-          {this.state.catViewing ? 
-            <CatView 
+          <div className="App">
+            <Toolbar
+              showLocations={this.state.showLocations} 
               cat={this.state.chosenCat} 
-            /> 
-          : null}
-          {this.state.catAdding ? 
-            <CatAdd 
-              addCategory={this.props.addCategory} 
+              catEdit={this.catEdit} 
+              catRemove={this.catRemove}
+              catView={this.catView}
+              catAdd={this.catAdd} 
               goBack={this.goBack}
-            /> 
-          : null}
-          {this.state.catEditing ? 
-            <CatEdit
-              cat={this.state.chosenCat}
-              addLocation={this.addLocation}
-              removeLocation={this.removeLocation}
-              goBack={this.goBack}
-            /> 
-          : null}
-          
-        </div>
+              showBackButton={this.state.catEditing || this.state.catViewing || this.state.catAdding || this.state.showLocations}
+            />
+            {this.state.showCats ? 
+              <Categories 
+                cats={this.state.categories} 
+                catUnpressed={this.catUnpressed} 
+                catPressed={this.catPressed}
+              /> 
+            : null}
+            {this.state.catViewing ? 
+              <CatView 
+                cat={this.state.chosenCat} 
+              /> 
+            : null}
+            {this.state.catAdding ? 
+              <CatAdd 
+                addCategory={this.props.addCategory} 
+                goBack={this.goBack}
+              /> 
+            : null}
+            {this.state.catEditing ? 
+              <CatEdit
+                cat={this.state.chosenCat}
+                addLocation={this.addLocation}
+                removeLocation={this.removeLocation}
+                goBack={this.goBack}
+              /> 
+            : null}
+            {this.state.showLocations ? 
+              <Locations
+                cats={this.state.categories}
+                addLocation={this.addLocation}
+                removeLocation={this.removeLocation}
+              /> 
+            : null}
+            <BottomBar 
+              goBack={this.goBack} 
+              openLocations={this.openLocations}  
+            />
+          </div>
     )
   }
 }

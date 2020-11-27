@@ -25,4 +25,3 @@ export const addLocation = (category, location) => (
        payload: {category, location} 
     }
 )
-

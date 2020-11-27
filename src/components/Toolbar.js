@@ -13,6 +13,7 @@ class Toolbar extends React.Component  {
         const cat = this.props.cat
         const catEditing = this.props.catEditing
         var title = cat ? cat.name : "Categories"
+        var title = this.props.showLocations ? "Locations" : title
         return (
             <div className="ToolbarContainer">
                 {this.props.showBackButton ? 
