@@ -1,11 +1,14 @@
 import React from 'react'
-import { Icon } from '@iconify/react'
-import locationIcon from '@iconify/icons-mdi/map-marker'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSmileWink } from '@fortawesome/free-solid-svg-icons'
 
 const LocationPin = ({ text }) => {
     return (
         <div className="pin">
-            <Icon icon={locationIcon} className="pin-icon" />
+            <FontAwesomeIcon 
+                icon={faSmileWink} 
+                size={'3x'} 
+            />
             <p className="pin-text">{text}</p>
         </div>
 )}

@@ -99,8 +99,6 @@ const Locations = ({cats, addLocation, removeLocation}) => {
             setAllLocationtems(itemsTemp)
         }
     }
-
-
         return (
             <div>
                 <table className="LocationsContainer">

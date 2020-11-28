@@ -1,7 +1,5 @@
 import React from 'react'
 import GoogleMapReact from 'google-map-react' 
-import { Icon } from '@iconify/react'
-import locationIcon from '@iconify/icons-mdi/map-marker'
 import LocationPin from './LocationPin'
 import '../styles/Map.css'
 
@@ -15,11 +13,11 @@ const Map = ({ location, zoomLevel }) => {
                     defaultCenter={location}
                     defaultZoom={zoomLevel}
                 >
-                <LocationPin
-                    lat={location.lat}
-                    lng={location.lng}
-                    text={location.address}
-                />
+                    <LocationPin
+                        lat={location.lat}
+                        lng={location.lng}
+                        text={location.address}
+                    />
                 </GoogleMapReact>
             </div>
         </div>
